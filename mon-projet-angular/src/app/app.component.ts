@@ -1,14 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { rejects } from 'assert';
+import { resolve } from 'dns';
+import { promise } from 'protractor';
+import {AppareilService} from './services/appareil.service'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   //title = 'my awesome app';
   isAuth = false
+  appareils!: any[];
 
+  lastUpdate = new Date();
+  /*lastUpdate = new Promise((resolve, reject)=>{
+    const date = new Date()
+    setTimeout(
+      ()=>{
+        resolve(date)
+      },900000
+      );
+    });*/
   //appareilOne = "Machine a laver"
   //appareilTwo = "Frigo"
   //appareilThree = "Ordinateur"
@@ -16,29 +30,26 @@ export class AppComponent {
   /**
    * Les directives
    */
-  appareils = [
-    {
-      name: 'Machine à laver',
-      status: 'éteint'
-    },
-    {
-      name: 'Frigo',
-      status: 'allumé'
-    },
-    {
-      name: 'Ordinateur',
-      status: 'éteint'
-    }
-  ];
   
-  constructor(){
+  
+  constructor(private appareilService: AppareilService){
     setTimeout(()=>{
       this.isAuth = true
     }, 4000
     )
   }
-  onAllumer(){
-    console.log("allumer");
-    
-  }
+
+  ngOnInit(){
+    this.appareils = this.appareilService.appareils;
+}
+
+onAllumer() {
+  this.appareilService.switchOnAll();
+}
+
+onEteindre() {
+  this.appareilService.switchOffAll();
+}
+
+
 }

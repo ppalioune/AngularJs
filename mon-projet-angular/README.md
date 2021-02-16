@@ -20,3 +20,6 @@ Dans ce premier test nous avons vu les éléments suivant:
 Il a deux types de directives:
 - les directives structurelles permettent de modifier la structure du document
 - les directives par attributs modifient le comportement d'un objet déjà existant.
+
+# Modifiez les données en temps réel avec les Pipes
+Cette partie concerne l'utilisation des pipes. ils prennent des données en input, les transforment, et puis affichent les données modifiées dans le DOM.
