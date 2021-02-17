@@ -7,14 +7,16 @@ import { MonPremierComponent } from './mon-premier/mon-premier.component';
 import { AppareilComponent } from './appareil/appareil.component';
 import { FormsModule } from '@angular/forms';
 import { PostListComponent } from './post-list/post-list.component';
-import {AppareilService} from './services/appareil.service'
+import {AppareilService} from './services/appareil.service';
+import { AuthComponent } from './auth/auth.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     MonPremierComponent,
     AppareilComponent,
-    PostListComponent
+    PostListComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
