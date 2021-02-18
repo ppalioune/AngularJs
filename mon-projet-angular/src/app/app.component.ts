@@ -9,7 +9,11 @@ import {AppareilService} from './services/appareil.service'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
+  constructor(){
+    
+  }
+  /*
   //title = 'my awesome app';
   isAuth = false
   appareils!: any[];
@@ -31,7 +35,7 @@ export class AppComponent implements OnInit {
    * Les directives
    */
   
-  
+  /*
   constructor(private appareilService: AppareilService){
     setTimeout(()=>{
       this.isAuth = true
@@ -50,6 +54,6 @@ onAllumer() {
 onEteindre() {
   this.appareilService.switchOffAll();
 }
-
+*/
 
 }
