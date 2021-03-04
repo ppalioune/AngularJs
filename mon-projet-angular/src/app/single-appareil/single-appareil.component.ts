@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NOMEM } from 'dns';
-import { AppareilComponent } from '../appareil/appareil.component';
 import { AppareilService } from '../services/appareil.service';
 
 @Component({

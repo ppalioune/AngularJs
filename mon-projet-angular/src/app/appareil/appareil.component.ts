@@ -7,8 +7,9 @@ import {AppareilService} from '../services/appareil.service'
   styleUrls: ['./appareil.component.scss']
 })
 export class AppareilComponent implements OnInit {
- @Input() appareilName!: string;
-  //appareilStatus: string = "éteint"
+
+//appareilStatus: string = "éteint"
+@Input() appareilName!: string;
 @Input() appareilStatus!: string
 @Input() index!: number;
 @Input() id!: number
