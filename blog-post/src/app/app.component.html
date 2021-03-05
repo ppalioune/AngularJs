@@ -1,0 +1,18 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <h2>My PostList</h2><br>
+
+      <app-post-list *ngFor="let post of posts" [titlepost]="post.title" [contentpost]="post.content">
+      </app-post-list>
+
+    </div>
+  </div>
+</div>
