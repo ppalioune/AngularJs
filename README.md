@@ -1,5 +1,5 @@
 # Démarrage
-Dans cette partie nous avons vu comment mettre en place et demarrer une application angular avec le `CLI`.
+ mettre en place et demarrer une application angular avec le `CLI`.
 - Installer [nodejs](https://nodejs.org/en/)
 - Installer `npm`
 - Installer `angular` avec la commande: `npm install -g @angular/cli`
@@ -8,8 +8,6 @@ Dans cette partie nous avons vu comment mettre en place et demarrer une applicat
 - Se dépalcer dans le dossier du projet et démarer son projet: ` ng serve --open`
 
 # Gestion des données
-Maintenant nous allons voir comment communiquer le DOM.
-Dans ce premier test nous avons vu les éléments suivant:
 - String interpolation
 - Property binding
 - Event binding
